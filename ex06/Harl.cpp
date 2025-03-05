@@ -25,11 +25,36 @@ void Harl::complain(std::string level)
 	{
 		if (comp[i].level == level)
 		{
-			(this->*comp[i].complain)();
-			return ;
+			switch (i)
+			{
+				case 0:
+				{
+					for (int j = i; j < 4; j++)
+							(this->*comp[j].complain)();
+					return ;
+				}
+				case 1:
+				{
+					for (int j = i; j < 4; j++)
+							(this->*comp[j].complain)();
+					return ;
+				}
+				case 2:
+				{
+					for (int j = i; j < 4; j++)
+							(this->*comp[j].complain)();
+					return ;
+				}
+				case 3:
+				{
+					for (int j = i; j < 4; j++)
+							(this->*comp[j].complain)();
+					return ;
+				}
+			}
 		}
 	}
-	std::cout << "No matching level \n";
+	std::cout << "[ Probably complaining about insignificant problems ] \n";
 }
 
 
